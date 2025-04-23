@@ -44,7 +44,6 @@ class MyJobTest extends TestCase
         ];
 
         $response = $this->postJson('/api/myjobs', $data);
-
         $response->assertStatus(201)
             ->assertJsonFragment($data);
 

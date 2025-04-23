@@ -27,7 +27,7 @@ class MyJobController extends Controller
                 'note' => 'nullable|string',
             ]);
             $myjob = MyJob::create($request->all());
-            return response(0)->json([
+            return response()->json([
                 'message' => 'Job created successfully',
                 'job' => $myjob,
             ], 201);
@@ -92,7 +92,7 @@ class MyJobController extends Controller
             $myjob->delete();
             return response()->json([
                 'message' => 'Job deleted successfully',
-            ]);
+            ],204);
         } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) { 
             return response()->json([
                 'message' => 'Job not found.',

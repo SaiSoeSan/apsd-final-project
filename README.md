@@ -2,6 +2,10 @@
 
 Restful api for job tracker.
 
+## ER diagram
+
+![ER-diagram](/screenshots/ER-diagram.png)
+
 ### Backend
 
 -   **User Authentication**: User registration, login, and logout using Laravel Sanctum.

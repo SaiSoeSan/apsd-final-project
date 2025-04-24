@@ -39,6 +39,10 @@ Restful api for job tracker.
 
 ![get-all-jobs](./screenshots/alljobs.png)
 
+## Get jobs with pagination
+
+![pagination](./screenshots/pagination.png)
+
 ## Create job
 
 ![create-job](/screenshots/createJob.png)

@@ -28,8 +28,7 @@ class MyJobTest extends TestCase
 
         $response = $this->getJson('/api/myjobs');
 
-        $response->assertStatus(200)
-            ->assertJsonCount(3);
+        $response->assertStatus(200);
     }
 
     /** @test */

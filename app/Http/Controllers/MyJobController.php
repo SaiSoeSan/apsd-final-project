@@ -11,7 +11,7 @@ class MyJobController extends Controller
     // Display a listing of the resource.
     public function index()
     {
-        $myjobs = MyJob::orderBy('created_at', 'desc')->get();
+        $myjobs = MyJob::orderBy('created_at', 'desc')->paginate(10);
         return response()->json($myjobs);
     }
 

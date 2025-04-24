@@ -41,7 +41,7 @@ Restful api for job tracker.
 
 ## Update job
 
-    ![update-patient](/screenshots/updateJob.png)
+![update-job](/screenshots/updateJob.png)
 
 ## Show job
 

@@ -89,7 +89,7 @@ class MyJobTest extends TestCase
 
         $response = $this->deleteJson('/api/myjobs/' . $myjob->id);
 
-        $response->assertStatus(204);
+        $response->assertStatus(200);
 
         $this->assertSoftDeleted('myjobs', ['id' => $myjob->id]);
     }

@@ -24,7 +24,7 @@ class MyJobController extends Controller
                 'job_title' => 'required|string|max:255',
                 'applied_from' => 'required|string|max:255',
                 'application_link' => 'required|string',
-                'note' => 'nullable|string',
+                'note' => 'required|string',
             ]);
             $myjob = MyJob::create($request->all());
             return response()->json([
@@ -86,13 +86,12 @@ class MyJobController extends Controller
     // Remove the specified resource from storage.
     public function destroy($id)
     {
-
         try {
             $myjob = MyJob::findOrFail($id);
             $myjob->delete();
             return response()->json([
                 'message' => 'Job deleted successfully',
-            ],204);
+            ],200);
         } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) { 
             return response()->json([
                 'message' => 'Job not found.',
